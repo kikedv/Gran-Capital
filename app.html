@@ -1,0 +1,63 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 25 18:11:29 2024
+
+@author: valde
+"""
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Style for the overlay layer */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 35px; /* Fixed height of 35px */
+      background-color: rgba(255, 255, 255, 1); /* white background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2; /* Set the z-index higher than the iframe */
+    }
+
+    /* Style for the iframe container */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 100%; /* Adjust the height of the iframe container */
+      padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive iframe */
+      z-index: 1; /* Set the z-index lower than the overlay */
+    }
+
+    /* Style for the iframe itself */
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Iframe container -->
+  <div class="iframe-container">
+    <!-- Your iframe code -->
+    <iframe
+      src="https://gran-capital.streamlit.app/"
+      height="450"
+      style="width:100%;border:none;"
+    ></iframe>
+  </div>
+
+  <!-- Overlay layer -->
+  <div class="overlay">
+    <!-- Add your content here, e.g., a message or buttons -->
+    <p></p>
+  </div>
+</body>
+</html>
